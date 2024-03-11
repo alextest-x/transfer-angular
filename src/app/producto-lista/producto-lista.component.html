@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div class="container text-center" style="margin: 30px" >
+  <h3> Sistema de tranferencias</h3>
+  </div>
+
+
+<table class="table table-striped table-hover align-middle">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">origen</th>
+      <th scope="col">destino</th>
+      <th scope="col">bank</th>
+      <th scope="col">monto </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productos">
+      <th scope="row">{{ producto.id }}</th>
+      <td>{{ producto.origin }}</td>
+      <td>{{ producto.destin }}</td>
+      <td>{{ producto.bank }}</td>
+      <td>{{ producto.amount }}</td>
+      <td class="text-center">
+    <div>
+       <button (click)="editarProducto(producto.id)"
+       class="btn btn-warning btn-sm me-3">Editar</button>
+
+       <button (click)="eliminarProducto(producto.id)"
+       class="btn btn-danger btn-sm me-3">Eliminar</button>
+
+    </div>
+   </td>
+  </tr>
+
+  </tbody>
+</table>
+</div>
+

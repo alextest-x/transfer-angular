@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="container text-center" style="margin: 30px">
+  <h3>Editar Producto</h3>
+  </div>
+
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="origin" class="form-label">origin</label>
+        <input type="text" class="form-control"
+        id="origin" name="origin" required="true"
+        [(ngModel)]="producto.origin">
+
+        <!-- asociamos el atributo de origin del objeto de producto
+          con [(ngModel)] para que funcione  hay que poner el name para aceder a los atributos
+          cualquier cambio en la vista se sincroniza en la clase de typescript
+          y cualquier cambio en la clase de  typescrip se sincroniza con la vista
+        -->
+
+      <div class="mb-3">
+        <label for="destin" class="form-label">destin</label>
+        <input type="text" step="any" class="form-control"
+        id="destin" name="destin"
+        [(ngModel)]="producto.destin">
+      </div>
+
+
+      <div class="mb-3">
+        <label for="bank" class="form-label">bank</label>
+        <input type="number" class="form-control"
+        id="bank" name="bank"
+        [(ngModel)]="producto.bank">
+      </div>
+
+      <div class="mb-3">
+        <label for="amount" class="form-label">amount</label>
+        <input type="text" class="form-control"
+        id="amount" name="amount"
+        [(ngModel)]="producto.amount">
+      </div>
+
+
+     </div>
+     <div class="text-center">
+      <button type="submit" class="btn btn-warning btn-sm me-3">Guardar</button>
+
+      <a href="/"  class="btn btn-danger btn-sm me-3">Regresar</a>
+
+    </div>
+    </form>
+
+
+  </div>
